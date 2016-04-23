@@ -14,14 +14,14 @@ MAX_FES=10000*dim;
 Gen=MAX_FES./NP;
 
 addpath('benchmark');
-%for fun=9:9%先测试第一个函数
+%for fun=9:9%
 for fun=2:size(myfunc,2)
     func_num = myfunc(fun);
     D = dim(func_num);
     Max_Gen = Gen(func_num);
     bestval = [];
     %for runindex=1:runs
-    for runindex=1:1%先运行一圈试试
+    for runindex=1:1%
         rand('seed',runindex);
         randn('seed',runindex);
      
